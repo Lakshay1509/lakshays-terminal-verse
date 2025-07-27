@@ -155,6 +155,9 @@ All colors MUST be HSL.
 
   .terminal-line {
     @apply flex items-start gap-2 text-sm leading-relaxed;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
   }
 
   .terminal-prompt {
@@ -235,59 +238,92 @@ All colors MUST be HSL.
   }
 }
 
-@layer utilities {
-  /* Custom Keyframes */
-  @keyframes typewriter {
-    from { max-width: 0; }
-    to { max-width: 100%; }
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .terminal-screen {
+    @apply p-3;
   }
 
-  @keyframes scan-lines {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(4px); }
+  .terminal-output {
+    @apply min-h-[50vh] max-h-[50vh];
   }
 
-  @keyframes glitch-1 {
-    0%, 14%, 15%, 49%, 50%, 99%, 100% {
-      transform: translateX(0);
-    }
-    15%, 49% {
-      transform: translateX(-2px);
-    }
+  .terminal-line {
+    @apply text-xs leading-relaxed;
+    max-width: 100%;
   }
 
-  @keyframes glitch-2 {
-    0%, 19%, 20%, 39%, 40%, 79%, 80%, 100% {
-      transform: translateX(0);
-    }
-    20%, 39% {
-      transform: translateX(2px);
-    }
-    40%, 79% {
-      transform: translateX(-2px);
-    }
+  .terminal-prompt {
+    @apply text-xs flex-shrink-0;
+    min-width: 80px;
   }
 
-  @keyframes boot-up {
-    0% { opacity: 0; transform: scale(0.8); }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; transform: scale(1); }
+  .terminal-input {
+    @apply text-xs;
+    max-width: calc(100% - 90px);
   }
 
-  @keyframes fade-in {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+  .terminal-cursor {
+    @apply h-4;
   }
 
-  .animate-boot-up {
-    animation: boot-up 2s ease-out forwards;
+  /* Make sure content doesn't overflow */
+  div[class*="terminal-"] {
+    max-width: 100%;
   }
+}
 
-  .animate-fade-in {
-    animation: fade-in 0.3s ease-out forwards;
-  }
+/* Custom Keyframes */
+@keyframes typewriter {
+  from { max-width: 0; }
+  to { max-width: 100%; }
+}
 
-  .animate-typewriter {
-    animation: typewriter 1s steps(40, end) forwards;
+@keyframes scan-lines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+@keyframes glitch-1 {
+  0%, 14%, 15%, 49%, 50%, 99%, 100% {
+    transform: translateX(0);
   }
+  15%, 49% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 19%, 20%, 39%, 40%, 79%, 80%, 100% {
+    transform: translateX(0);
+  }
+  20%, 39% {
+    transform: translateX(2px);
+  }
+  40%, 79% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes boot-up {
+  0% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-boot-up {
+  animation: boot-up 2s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+.animate-typewriter {
+  animation: typewriter 1s steps(40, end) forwards;
 }

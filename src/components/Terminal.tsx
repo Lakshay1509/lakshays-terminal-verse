@@ -218,7 +218,7 @@ export const Terminal = () => {
           <div className="terminal-dot red"></div>
           <div className="terminal-dot yellow"></div>
           <div className="terminal-dot green"></div>
-          <span className="text-muted-foreground text-xs ml-4">
+          <span className="text-muted-foreground text-xs ml-4 truncate">
             lakshay@portfolio: ~
           </span>
         </div>
@@ -232,10 +232,10 @@ export const Terminal = () => {
                   <span className="terminal-prompt text-terminal-green">
                     {getPrompt()}
                   </span>
-                  <span className="text-foreground">{line.content}</span>
+                  <span className="text-foreground break-all">{line.content}</span>
                 </>
               ) : (
-                <div className={`${
+                <div className={`w-full ${
                   line.type === 'error' 
                     ? 'text-red-400' 
                     : line.content.includes('✓') 
@@ -272,7 +272,7 @@ export const Terminal = () => {
 
           {/* Autocomplete */}
           {showAutocomplete && autocompleteOptions.length > 0 && (
-            <div className="ml-4 mt-2 p-2 bg-card border border-border rounded-md">
+            <div className="ml-4 mt-2 p-2 bg-card border border-border rounded-md max-w-full overflow-x-auto">
               <div className="text-sm text-muted-foreground mb-1">Available commands:</div>
               {autocompleteOptions.map((option, index) => (
                 <div key={index} className="text-terminal-cyan text-sm">

@@ -1,0 +1,33 @@
+/* Mobile responsiveness fixes */
+@media screen and (max-width: 768px) {
+  .terminal-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .terminal-content {
+    white-space: pre-wrap; /* Allows text to wrap */
+    word-break: break-word; /* Breaks long words if needed */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    font-size: 0.9em; /* Slightly smaller font on mobile */
+  }
+  
+  .terminal-prompt, .terminal-text {
+    padding-right: 10px; /* Ensure text doesn't touch the edge */
+  }
+}
+
+/* Ensure the main container adapts to different screen sizes */
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Ensure terminal fits within viewport */
+.terminal-container {
+  box-sizing: border-box;
+  max-width: 100%;
+}

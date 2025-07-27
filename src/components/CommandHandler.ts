@@ -117,38 +117,29 @@ export class CommandHandler {
 
   private getProjects(): string[] {
     return [
-      '╭─────────────────────────────────────────────────╮',
-      '│                  My Projects                     │',
-      '╰─────────────────────────────────────────────────╯',
+      '╭──────────────────────────────────────╮',
+      '│             My Projects              │',
+      '╰──────────────────────────────────────╯',
       '',
       '🎵 Resonanze - AI Voice Health Diagnostic',
-      '   ├─ AI-powered voice analysis for health insights',
-      '   ├─ Achieved 90% accuracy in diagnostic predictions',
-      '   ├─ Tech: Python, TensorFlow, Flask, React',
-      '   ├─ Live: https://resonanze.netlify.app/',
-      '   └─ Github: https://github.com/Lakshay1509/Resonanze',
-          
-          
-
+      '   ├─ AI-powered voice analysis for health',
+      '   ├─ 90% accuracy in diagnostics',
+      '   ├─ Tech: Python, TensorFlow, React',
+      '   └─ github.com/Lakshay1509/Resonanze',
       '',
-      '📊 Graph Visualizer - Algorithm Learning Tool',
-      '   ├─ Interactive BFS/DFS/Dijkstra visualizations',
+      '📊 Graph Visualizer - Algorithm Learning',
+      '   ├─ Interactive BFS/DFS visualization',
       '   ├─ Educational tool for CS students',
       '   ├─ Tech: React, D3.js, TypeScript',
-      '   ├─ Live: https://graphvisual.netlify.app/',
-      '   └─ Github: https://github.com/Lakshay1509/graph_visualizer',
+      '   └─ github.com/Lakshay1509/graph_visualizer',
       '',
       '💰 Cred Guru - Smart Finance Tracker',
-      '   ├─ AI + Blockchain personal finance management',
-      '   ├─ Smart contract integration for transparency',
-      '   ├─ Tech: Solidity, Web3.js, React, Node.js',
-      '   └─ Github: https://github.com/Lakshay1509/HackTU-loan',
+      '   ├─ AI + Blockchain finance management',
+      '   ├─ Smart contract integration',
+      '   ├─ Tech: Solidity, Web3.js, React',
+      '   └─ github.com/Lakshay1509/HackTU-loan',
       '',
-      '🔗 More projects on GitHub:',
-      '   └─ https://github.com/Lakshay1509',
-      '',
-      '✨ Each project solves a unique problem and',
-      '   showcases different technical skills!',
+      '🔗 More: github.com/Lakshay1509',
       ''
     ];
   }
