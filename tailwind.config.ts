@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				mono: ['JetBrains Mono', 'Fira Code', 'IBM Plex Mono', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +64,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Terminal Aurora Colors
+				'terminal-green': 'hsl(var(--terminal-green))',
+				'terminal-yellow': 'hsl(var(--terminal-yellow))',
+				'terminal-cyan': 'hsl(var(--terminal-cyan))',
+				'terminal-magenta': 'hsl(var(--terminal-magenta))',
+				'terminal-blue': 'hsl(var(--terminal-blue))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
