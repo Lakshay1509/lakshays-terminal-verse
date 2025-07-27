@@ -284,7 +284,7 @@ export const Terminal = () => {
         </div>
 
         {/* Footer */}
-        <div className="mt-4 pt-4 border-t border-border text-xs text-muted-foreground space-y-1">
+        <div className="mt-4 pt-4 border-t border-border text-xs text-muted-foreground space-y-6">
           <div className="flex flex-wrap gap-4">
             <span><kbd className="text-terminal-cyan">TAB</kbd> autocomplete</span>
             <span><kbd className="text-terminal-cyan">↑↓</kbd> history</span>
